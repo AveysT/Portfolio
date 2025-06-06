@@ -1,5 +1,6 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import "tailwindcss";
+
 
 @theme {
   --text-color-main: #032a55;
@@ -7,10 +8,11 @@
   --animate-codebar: codebar 1s cubic-bezier(1,0,0,1) infinite; 
 
   @keyframes codebar {
-  50% {
-    opacity: 0;
+    50% {
+      opacity: 0;
+    }
   }
-}
+
 }
 
 body {
@@ -27,3 +29,38 @@ p, li, span {
   @apply text-submain;
 }
 
+.parentLink {
+  @apply w-10 h-15 bg-blue-950 rounded-3xl flex items-center justify-center;
+}
+
+.childrenLink {
+  @apply  absolute font-bold text-white -rotate-45;
+}
+
+.childrenText {
+  @apply invisible opacity-0 text-white text-xl;
+}
+
+.parentLink:hover {
+  @apply w-30 transition-all duration-500 ease-in-out;
+
+  .childrenLink {
+    @apply rotate-45 translate-x-7 transition-all duration-500 ease-in-out;
+  }
+
+  .childrenText{
+    @apply visible opacity-100 -translate-x-6 transition-all duration-500 ease-in-out;
+  }
+}
+
+.parentLink:hover:not(:hover) {
+  @apply w-10 ease-in-out;
+
+  .childrenLink {
+    @apply -rotate-45 -translate-x-7 ease-in-out;
+  }
+
+  .childrenText {
+    @apply invisible opacity-0 translate-x-6 ease-in-out;
+  }
+}
