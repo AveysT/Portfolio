@@ -1,8 +1,12 @@
 import { Tooltip } from "react-tooltip";
-import { SlArrowDown } from "react-icons/sl";
+import { SlArrowDown, SlDocs, SlEnvolope } from "react-icons/sl";
 import ProjectCard from "./components/projectCard";
 
 function App() {
+  function mailCopy() {
+    navigator.clipboard.writeText("Alejandrotorquemada@gamil.com");
+  }
+
   return (
     <>
       <div className="grid grid-rows-[1fr_1fr] h-dvh items-center">
@@ -87,7 +91,7 @@ function App() {
         <section className="h-[100%] flex flex-col m-auto pt-20 pb-20">
           <article className="w-screen max-w-3xl flex flex-col gap-3 p-4">
             <div className="flex flex-col gap-2">
-              <h2 className="text-3xl text-main">What i do</h2>
+              <h2 className="text-3xl text-main">What I do</h2>
               <ul className="text-m list-disc list-inside">
                 <li>Write HTML with a proper semantic</li>
                 <li>Find the best style in CSS</li>
@@ -122,8 +126,41 @@ function App() {
           </section>
         </header>
 
-        <footer className="h-[100%] flex flex-col m-auto pt-20 pb-20">
+        <footer className=" h-[100%] flex flex-col m-auto pt-20 pb-20 items-center">
           <h2 className="text-3xl text-main">Socials</h2>
+          <section className="flex flex-row items-center gap-4 mt-10 mb-10 max-2xl:flex-col">
+            <div className="flex flex-row gap-4 rounded-lg hover:shadow-[0px_0px_16px_0px_rgba(0,_0,_0,_0.3)] transition-all duration-300">
+              <div className="flex flex-row gap-2 text-3xl border-2 border-r-0 border-gray-400 bg-gray-200 p-4 rounded-l-lg justify-center items-center ">
+                <SlEnvolope />
+              </div>
+              <div className="-ml-6 flex flex-row gap-2 border-2 border-l-gray-200 border-r-gray-200 border-gray-400 bg-gray-100 p-4 -z-10">
+                <p className="text-lg">Alejandrotorquemada@gmail.com</p>
+              </div>
+              <button
+                onClick={mailCopy}
+                className="-ml-6 flex flex-row gap-2 text-3xl border-2 border-l-0 border-gray-400 bg-gray-200 p-4 rounded-r-lg justify-center items-center hover:bg-gray-300 transition-colors duration-300"
+              >
+                <SlDocs />
+              </button>
+            </div>
+            <nav className="flex flex-row gap-4  items-center justify-center">
+              <a
+                href="https://www.linkedin.com/in/alejandro-torquemada/"
+                target="_blank"
+              >
+                <img
+                  src="src\assets\linkedin.png"
+                  className="max-h-15 hover:shadow-[0px_0px_16px_0px_rgba(0,_0,256,_0.6)] rounded-lg transition-all duration-300"
+                />
+              </a>
+              <a href="https://github.com/AveysT" target="_blank">
+                <img
+                  src="src\assets\github.png"
+                  className="max-h-15 hover:shadow-[0px_0px_16px_0px_rgba(0,_0,_0,_0.6)] rounded-lg transition-all duration-300"
+                />
+              </a>
+            </nav>
+          </section>
         </footer>
       </div>
     </>
