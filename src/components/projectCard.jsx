@@ -61,7 +61,7 @@ function ProjectCard() {
   return (
     <div className="flex flex-row-2 gap-10 w-[1400px] max-2xl:flex-col max-2xl:w-auto max-2xl:max-w-200 mx-10 justify-center items-center">
       {Projects.map((link, index) => (
-        <Card key={index} project={link} />
+        <Card key={index} />
       ))}
     </div>
   );
