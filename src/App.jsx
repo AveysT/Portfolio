@@ -24,7 +24,7 @@ function App() {
               <p className="text-2xl">Front End Developer</p>
               <p className="flex flex-row gap-10">
                 <img
-                  src="public\html.png"
+                  src="/Portfolio/html.png"
                   alt="HTML"
                   data-tooltip-id="HTML-tooltip"
                   data-tooltip-place="bottom"
@@ -36,7 +36,7 @@ function App() {
                   style={{ backgroundColor: "#edf2f7", color: "#000" }}
                 />
                 <img
-                  src="public\css.png"
+                  src="/Portfolio/css.png"
                   alt="CSS"
                   data-tooltip-id="CSS-tooltip"
                   data-tooltip-place="bottom"
@@ -48,7 +48,7 @@ function App() {
                   style={{ backgroundColor: "#edf2f7", color: "#000" }}
                 />
                 <img
-                  src="public\js.png"
+                  src="/Portfolio/js.png"
                   alt="JS"
                   data-tooltip-id="JS-tooltip"
                   data-tooltip-place="bottom"
@@ -60,7 +60,7 @@ function App() {
                   style={{ backgroundColor: "#edf2f7", color: "#000" }}
                 />
                 <img
-                  src="public\react.png"
+                  src="/Portfolio/react.png"
                   alt="React"
                   data-tooltip-id="React-tooltip"
                   data-tooltip-place="bottom"
@@ -72,7 +72,7 @@ function App() {
                   style={{ backgroundColor: "#edf2f7", color: "#000" }}
                 />
                 <img
-                  src="public\github.png"
+                  src="/Portfolio/github.png"
                   alt="GitHub"
                   data-tooltip-id="GitHub-tooltip"
                   data-tooltip-place="bottom"
@@ -149,13 +149,13 @@ function App() {
                 target="_blank"
               >
                 <img
-                  src="public\linkedin.png"
+                  src="Portfolio\linkedin.png"
                   className="max-h-15 hover:shadow-[0px_0px_16px_0px_rgba(0,_0,256,_0.6)] rounded-lg transition-all duration-300"
                 />
               </a>
               <a href="https://github.com/AveysT" target="_blank">
                 <img
-                  src="public\github.png"
+                  src="Portfolio\github.png"
                   className="max-h-15 hover:shadow-[0px_0px_16px_0px_rgba(0,_0,_0,_0.6)] rounded-lg transition-all duration-300"
                 />
               </a>
