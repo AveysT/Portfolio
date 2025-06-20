@@ -6,16 +6,16 @@ const Projects = [
     name: "Converter",
     description:
       "A currency converter app built with React, fully responsive, featuring a chart that displays exchange rate trends.",
-    holder: "public/ConverterHolder.webp",
-    img: "public/Converter.webp",
+    holder: "public/converterHolder.webp",
+    img: "public/converter.webp",
   },
   {
     link: "aveyst.github.io/TicTacToe/",
     name: "Tic Tac Toe",
     description:
       "A simple Tic Tac Toe game built with React, using Tailwind CSS for styling and animations that respond to cursor movement.",
-    holder: "public/TictactoeHolder.webp",
-    img: "public/Tictactoe.webp",
+    holder: "public/tictactoeHolder.webp",
+    img: "public/tictactoe.webp",
   },
 ];
 
