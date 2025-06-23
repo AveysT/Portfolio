@@ -1,23 +1,5 @@
+import { useEffect, useState } from "react";
 import { SlLink } from "react-icons/sl";
-
-const Projects = [
-  {
-    link: "https://aveyst.github.io/Converter/",
-    name: "Converter",
-    description:
-      "A currency converter app built with React, fully responsive, featuring a chart that displays exchange rate trends.",
-    holder: "/Portfolio/converterHolder.webp",
-    img: "/Portfolio/converter.webp",
-  },
-  {
-    link: "https://aveyst.github.io/TicTacToe/",
-    name: "Tic Tac Toe",
-    description:
-      "A simple Tic Tac Toe game built with React, using Tailwind CSS for styling and animations that respond to cursor movement.",
-    holder: "/Portfolio/tictactoeHolder.webp",
-    img: "/Portfolio/tictactoe.webp",
-  },
-];
 
 const Card = ({ project }) => {
   return (
@@ -58,10 +40,30 @@ const Card = ({ project }) => {
 };
 
 function ProjectCard() {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/Portfolio/projects.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setProjects(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching projects:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div className="text-center my-10">Loading projects...</div>;
+  }
+
   return (
     <div className="flex flex-row-2 gap-10 w-[1400px] max-2xl:flex-col max-2xl:w-auto max-2xl:max-w-200 mx-10 justify-center items-center">
-      {Projects.map((link, index) => (
-        <Card key={index} project={link} />
+      {projects.map((project, index) => (
+        <Card key={index} project={project} />
       ))}
     </div>
   );
