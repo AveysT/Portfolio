@@ -149,13 +149,13 @@ function App() {
                 target="_blank"
               >
                 <img
-                  src="Portfolio\linkedin.png"
+                  src="/Portfolio/linkedin.png"
                   className="max-h-15 hover:shadow-[0px_0px_16px_0px_rgba(0,_0,256,_0.6)] rounded-lg transition-all duration-300"
                 />
               </a>
               <a href="https://github.com/AveysT" target="_blank">
                 <img
-                  src="Portfolio\github.png"
+                  src="/Portfolio/github.png"
                   className="max-h-15 hover:shadow-[0px_0px_16px_0px_rgba(0,_0,_0,_0.6)] rounded-lg transition-all duration-300"
                 />
               </a>

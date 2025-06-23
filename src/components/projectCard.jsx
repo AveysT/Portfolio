@@ -2,7 +2,7 @@ import { SlLink } from "react-icons/sl";
 
 const Projects = [
   {
-    link: "aveyst.github.io/Converter/",
+    link: "https://aveyst.github.io/Converter/",
     name: "Converter",
     description:
       "A currency converter app built with React, fully responsive, featuring a chart that displays exchange rate trends.",
@@ -10,7 +10,7 @@ const Projects = [
     img: "/Portfolio/converter.webp",
   },
   {
-    link: "aveyst.github.io/TicTacToe/",
+    link: "https://aveyst.github.io/TicTacToe/",
     name: "Tic Tac Toe",
     description:
       "A simple Tic Tac Toe game built with React, using Tailwind CSS for styling and animations that respond to cursor movement.",
@@ -61,7 +61,7 @@ function ProjectCard() {
   return (
     <div className="flex flex-row-2 gap-10 w-[1400px] max-2xl:flex-col max-2xl:w-auto max-2xl:max-w-200 mx-10 justify-center items-center">
       {Projects.map((link, index) => (
-        <Card key={index} />
+        <Card key={index} project={link} />
       ))}
     </div>
   );
