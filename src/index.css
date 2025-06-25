@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import "tailwindcss";
 
-
 @theme {
   --text-color-main: #032a55;
   --text-color-submain: #173b60;
@@ -20,17 +19,8 @@ body {
   font-family: 'Source Code Pro', monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  @apply font-bold;
-  @apply text-main
-}
-
-p, li, span {
-  @apply text-submain;
-}
-
 .parentLink {
-  @apply w-10 h-15 bg-blue-950 rounded-3xl flex items-center justify-center;
+  @apply w-10 h-15 bg-indigo-500 rounded-3xl flex items-center justify-center;
 }
 
 .childrenLink {

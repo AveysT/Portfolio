@@ -3,11 +3,11 @@ import { SlLink } from "react-icons/sl";
 
 const Card = ({ project }) => {
   return (
-    <div className="grid grid-cols-2 gap-5 w-[50%] max-2xl:w-[100%] min-h-80 max-2xl:grid-cols-1 rounded-2xl shadow-[0px_0px_16px_0px_rgba(0,_0,_0,_0.1)] group">
+    <div className="dark:bg-gray-700 grid grid-cols-2 gap-5 w-[50%] max-2xl:w-[100%] min-h-80 max-2xl:grid-cols-1 rounded-2xl shadow-[0px_0px_16px_0px_rgba(0,_0,_0,_0.1)] group">
       <a
         href={project.link}
         target="_blank"
-        className="bg-gray-100 col-span-1 rounded-2xl flex items-center justify-center relative overflow-hidden aspect-[4/4] max-2xl:aspect-[4/2] w-full "
+        className="dark:bg-gray-600  bg-gray-100 col-span-1 rounded-2xl flex items-center justify-center relative overflow-hidden aspect-[4/4] max-2xl:aspect-[4/2] w-full "
       >
         <span className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 max-2xl:group-hover:opacity-100">
           <img
@@ -24,8 +24,12 @@ const Card = ({ project }) => {
       </a>
 
       <div className="grid col-span-1 gap-4 pt-4 max-2xl:mx-4 max-2xl:pb-10 max-2xl:gap-7">
-        <h2 className="text-4xl font-semibold mb-2">{project.name}</h2>
-        <p className="text-sm">{project.description}</p>
+        <h2 className="dark:text-gray-200 text-main text-4xl font-semibold mb-2">
+          {project.name}
+        </h2>
+        <p className="dark:text-gray-100 text-submain text-sm">
+          {project.description}
+        </p>
         <a
           href={project.link}
           target="_blank"
